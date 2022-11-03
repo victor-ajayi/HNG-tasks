@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, request
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -30,7 +30,7 @@ def index():
     else:
         return "Invalid operation."
 
-    return response
+    return jsonify(response)
     
 
 if __name__ == "__main__":
