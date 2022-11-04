@@ -13,8 +13,8 @@ def invalid_route(e):
 @app.route('/', methods=["POST"])
 def index():
     operation = request.json["operation_type"]["value"]
-    x = request.json["x"]
-    y = request.json["y"]
+    x = int(request.json["x"])
+    y = int(request.json["y"])
 
     response = {
         "slackUsername": "mitsuki",
