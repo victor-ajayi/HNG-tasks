@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=["POST"])
 def index():
-    operation = request.json["operation_type"]["value"]
+    operation = request.json["operation_type"]
     x = int(request.json["x"])
     y = int(request.json["y"])
 
