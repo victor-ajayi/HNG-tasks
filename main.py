@@ -5,11 +5,6 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 
-@app.errorhandler(404)
-def invalid_route(e):
-    return "Invalid route."
-
-
 @app.route('/', methods=["POST"])
 def index():
     operation = request.json["operation_type"]["value"]
